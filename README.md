@@ -1,19 +1,16 @@
-##Udacity FEND Project 5: Neighborhood Map
+##Neighborhood Map
 
 ##Summary
 
-
-This project required creating a single page application using the Knockout framework. The app is an interactive map of my neighborhood, with curated locations that one can learn more about with data from the Foursqaure API. The locations can also be filtered using a text input search.
+In this project an interactive map was created on which show six bars with info fetched from Foursquare API. User can filter bars by opening a sidebar and starting typing name of the bar in the input field.
 
 ##Steps to launch:
 
-View the project on github pages: [My Neighborhood Map](http://talongi.github.io/udacity-p5-map/)
+Clone or download this repository on your local machine. Open index.html file.
 
 ##Resources used:
 
 1. Udacity forums https://discussions.udacity.com/c/nd001-project-5-neighborhood-map-project
-2. HeadFirst HTML5 Programming (book)
-3. KnockOut Documentation
-4. StackOverflow
-5. MDN docs
+2. Official Knockout documentation
+3. StackOverflow
 
