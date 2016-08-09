@@ -10,7 +10,7 @@ Clone or download this repository on your local machine. Open index.html file.
 
 ##Resources used:
 
-1. Udacity forums https://discussions.udacity.com/c/nd001-project-5-neighborhood-map-project
+1. Udacity forums https://discussions.udacity.com/c/nd001-neighborhood-map-project
 2. Official Knockout documentation
 3. StackOverflow
 
