@@ -137,3 +137,8 @@ input[type="checkbox"]{
 	margin-right:0;
 }
 
+.powered-by{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
