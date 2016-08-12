@@ -165,6 +165,8 @@ var init = function() {
             for (var i = 0; i < self.markers.length; i++) {
                 self.markers[i].setVisible(false);
             }
+            //close all info windows
+            self.infoWindow.close();
 
             //search criteria, case insensitive
             var filter = this.query().toLowerCase();
@@ -255,8 +257,8 @@ var init = function() {
     }
 
 
-    var ViewModel = new ViewModel();
+    var viewModel = new ViewModel();
 
 //initialize knockout
-    ko.applyBindings(ViewModel);
+    ko.applyBindings(viewModel);
 };
