@@ -6,7 +6,8 @@ In this project an interactive map was created on which six bars are shown with 
 
 ##Steps to launch:
 
-Clone or download this repository on your local machine. Open index.html file.
+1. Clone or download this repository on your local machine. Open index.html file.  
+2. Or go to this [link](http://interactive-map.bitballoon.com/)
 
 ##Resources used:
 
