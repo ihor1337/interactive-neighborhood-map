@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Neighborhood Map</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<input type="checkbox" id="sidebar-toggle">
+    <div class="container-fluid">
+     <div class="row">
+         <label class="toggle" for="sidebar-toggle"><span> ☲ </span></label>
+         <div class="col-sm-6 col-sm-offset-3 msg">
+             <div class="hidden" data-bind="attr: { class: foursquareErrorMsg }">
+                 <div class="alert alert-danger alert-dismissible text-center" role="alert">
+                     <button data-bind="click: function () { foursquareErrorMsg('hidden'); }" type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                     <strong>Oh snap!</strong> It seems that something went wrong, we could not load Foursquare data. Please, try again later.
+                 </div>
+             </div>
+         </div>
+         <div id="mapDiv" class="map col-sm-12"></div>
+
+         <div class="sidebar">
+             <h4>Enter bar name</h4>
+             <form >
+                 <input id="search" class="form-control" data-bind="textInput: query"  placeholder="Enter bar name..." type="text" autocomplete="off">
+             </form>
+             <h4>Bars</h4>
+             <div class="list-group results-list" data-bind="foreach: filteredBars">
+                 <a href="#" class="list-group-item col-md-12" data-bind="click: $parent.selectBar">
+                     <p class="listItem" data-bind="text: $data.name"></p>
+                 </a>
+             </div>
+         </div>
+         <div class="powered-by">
+            <a href="http://www.foursquare.com">
+                <img class="img-responsive" src="ico/Powered-by-Foursquare-full-color-300.png" alt="foursquare logo">
+            </a>
+         </div>
+     </div>
+    </div>
+
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <script src="js/viewmodel.js"></script>
+        <script>
+            function googleError() {
+                alert("We couldn't load Google map!");
+            }
+        </script>
+        <script  src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDOjwGvUnRBBiaVMHaW4uFqffALLL2HiD0&callback=init" onerror="googleError()" async defer></script>
+</body>
+</html>
